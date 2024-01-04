@@ -1,4 +1,4 @@
-import 'package:firebase_crud/todo_controller.dart';
+import 'package:firebase_crud/controllers/todo_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.deepPurple.shade100,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(
           "Firebase Crud Operation",
           style: TextStyle(fontSize: 20, color: Colors.white),
