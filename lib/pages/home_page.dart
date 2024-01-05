@@ -1,3 +1,4 @@
+import 'package:firebase_crud/controllers/auth_controller.dart';
 import 'package:firebase_crud/controllers/todo_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TodoController todoController = Get.put(TodoController());
+    AuthController authController = Get.put(AuthController());
     return Scaffold(
       backgroundColor: Colors.deepPurple.shade100,
       appBar: AppBar(
@@ -18,6 +20,17 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Colors.deepPurple,
+        actions: [
+          IconButton(
+            onPressed: () {
+              authController.logout();
+            },
+            icon: const Icon(
+              Icons.logout_outlined,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
