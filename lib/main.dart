@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crud/firebase_options.dart';
-import 'package:firebase_crud/pages/sign_up_page.dart';
+import 'package:firebase_crud/pages/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,6 +25,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SignUpPage());
+        home: Auth());
   }
 }
